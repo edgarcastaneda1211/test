@@ -1,0 +1,10 @@
+:host{
+    display: block;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 20px;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  min-height: 200px; 
+}
