@@ -1,1 +1,8 @@
-<p>Different header Works</p>
+<header>
+    <div *ngIf="showOwnership">
+      <p>The characters are property of Informatix</p>
+    </div>
+    <div *ngIf="!showOwnership">
+      <p>They are not our characters</p>
+    </div>
+</header>
