@@ -6,8 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent { // like main in java - starting pont of code... connects to index/html
+export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
+  } // like main in java - starting pont of code... connects to index/html
   showOwnership: boolean = true; // shared data that will be used in heroe html 
+  isOurCharacters = true;
 
   ngOnInit(): void { // keep lifecylce clean... like putting shoes back in closet
     this.testFunction(); 
