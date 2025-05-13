@@ -1,39 +1,11 @@
-<!-- 
-<div *ngFor="let hero of heroes">
-    <img [src]="hero.image" alt="{{ hero.name}}">
-    <h3>{{ hero.name }}</h3>
-    <p>{{ hero.description}}</p>
-    <p>{{ hero.dateOfAppearance}}</p>
-    <p>{{ hero.publisher}}</p>
-</div>
-
-
-
-
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    </div>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">Cras justo odio</li>
-      <li class="list-group-item">Dapibus ac facilisis in</li>
-      <li class="list-group-item">Vestibulum at eros</li>
-    </ul>
-    <div class="card-body">
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-
--->
-
   <div class="container">
-    <div class="row">
-      <!-- Apply the *ngFor to the card's container div -->
-      <div class="col-md-4 mb-4" *ngFor="let hero of heroes">
-        <div class="card" style="width: 18rem;">
+    <div class="row justify-content-center">
+      <!-- Apply the *ngFor to the card's container, essentially a for loop that for every local var
+       hero in heroes array, we let i = index which creates a copy of div element and its contents,
+       sets the hero variable variable to current array item like batman or supderman, then sets the i
+       variable to the current index, 0 , 1, 2 etc. and renders this copy w appropriate data! -->
+      <div class="col-md-4 mb-4" *ngFor="let hero of heroes; let i = index">
+        <div class="card" style="width: 16rem;">
           <!-- Hero image - to get is is done as hero.image in src... instead of placeholder -->
           <img class="card-img-top" [src]="hero.image" alt="{{ hero.name }}">
           
@@ -52,7 +24,7 @@
           
           <div class="card-body">
             <!-- Links for additional actions -->
-            <a href="#" class="card-link">View Details</a>
+            <a [routerLink]="['/heroe', i]" class="card-link">View Details</a>
             <a href="#" class="card-link">Hero Wiki</a>
           </div>
         </div>

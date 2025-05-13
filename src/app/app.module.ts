@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeroeComponent } from './components/body/heroe/heroe.component';
 import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
     HeroeComponent,
     HomeComponent,
     ContactoComponent,
+    HeroDetailsComponent,
   ],
   imports: [
     BrowserModule,

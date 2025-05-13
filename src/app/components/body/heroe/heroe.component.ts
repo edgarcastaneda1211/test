@@ -1,21 +1,20 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Heroe } from '../../../class/heroe';
+import { HeroesService } from '../../../services/heroes.service'; // Add this import
 
 @Component({
   selector: 'app-heroe',
-  templateUrl: './heroe.component.html', // Fixed path
+  templateUrl: './heroe.component.html',
   styleUrls: ['./heroe.component.css']
 })
 export class HeroeComponent implements OnInit {
-  // Properties established
-  heroes: Heroe[] = [ // create an array called heroes of obj type Heroe, which each element is a full object
-    new Heroe('Batman', 'Dark Knight', 'assets/img/batman.jpg', '2021', 'DC'),
-    new Heroe('Spiderman', 'Shoots webs', 'assets/img/spiderman.jpg', '2020', 'Marvel')
-  ]; 
-
-
-  constructor() { } 
-
-  ngOnInit(): void { // lifecycle
+  heroes: Heroe[] = []; // Just an empty array initially
+  
+  // Just have ONE service injected - in the constructor - !!!! Gives access to all methods!!!!
+  constructor(private heroesService: HeroesService) { }
+  
+  ngOnInit(): void {
+    // Get data from service
+    this.heroes = this.heroesService.getHeroes();
   }
 }
