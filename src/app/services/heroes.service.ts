@@ -7,8 +7,8 @@ import { Heroe } from '../class/heroe';
 })
 export class HeroesService {
   private heroes: Heroe[] = [
-    new Heroe('Batman', 'Dark Knight', 'assets/img/batman.jpg', '2021', 'DC'),
-    new Heroe('Spiderman', 'Shoots webs', 'assets/img/spiderman.jpg', '2020', 'Marvel')
+    new Heroe('Batman', ' Protege Gotham City con su inteligencia y tecnología', 'assets/img/batman.jpg', '2021', 'DC'),
+    new Heroe('Spiderman', 'Protege Nueva York ', 'assets/img/spiderman.jpg', '2020', 'Marvel')
   ];
 
   constructor() { }

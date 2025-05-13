@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { BodyComponent } from './components/body/body.component';
 import { HeroeComponent } from './components/body/heroe/heroe.component';
-import { ContactoComponent } from './components/contacto/contacto.component';
+import { ContactsComponent } from './components/body/contacts/contacts.component';
 import { HeroDetailsComponent } from './components/hero-details/hero-details.component';
 
 
@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'heroes', component: BodyComponent }, // BodyComponent contains heroes list
   { path: 'heroe/:id', component: HeroDetailsComponent },
-  { path: 'contacto', component: ContactoComponent },
+  { path: 'contacts', component: ContactsComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home' }
 ];
